@@ -21,22 +21,22 @@ function budgetCalculator(watch, phone, laptop) {
 let shoppingCost = budgetCalculator(2, 5, 7);
 console.log('Your total shopping cost is : ', shoppingCost);
 
-function hotelCost(day) {
+function hotelCost(days) {
     let cost = 0;
-    if (day < 0) {
+    if (days < 0) {
         return 'Day can not ber negative';//checking for wrong input
     }
-    else if (day <= 10) {
-        cost = day * 100;
-    } else if (day <= 20) {
+    else if (days <= 10) {
+        cost = days * 100;
+    } else if (days <= 20) {
         let first10days = 10 * 100;
-        let remainingDays = day - 10;
+        let remainingDays = days - 10;
         let second10days = remainingDays * 80;
         cost = first10days + second10days;
     } else {
         let first10days = 10 * 100;
         let second10days = 10 * 80;
-        let remainingDays = day - 20;
+        let remainingDays = days - 20;
         let after20days = remainingDays * 50;
         cost = first10days + second10days + after20days;
     }
