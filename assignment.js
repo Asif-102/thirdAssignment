@@ -46,11 +46,10 @@ let totalCostOfHOtel = hotelCost(31);
 console.log('Your total cost of hotel is: ', totalCostOfHOtel);
 
 function megaFriend(friendsName) {
-    bigName = friendsName[0];
+    let bigName = '';
     for (let i = 0; i < friendsName.length; i++) {
-        let name = friendsName[i];
-        if (name > bigName) {
-            bigName = name;
+        if (friendsName[i].length > bigName.length) {
+            bigName = friendsName[i];
         }
     }
     return bigName;
